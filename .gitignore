@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# environment variables
+.env
+
+# optional logs and OS files
+logs
+*.log
+npm-debug.log*
+
+# build output (if using a bundler)
+dist/
+build/
+
+# editor folders
+.vscode/
+.idea/
+
+# system files
+.DS_Store
+Thumbs.db
