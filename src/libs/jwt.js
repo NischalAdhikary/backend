@@ -8,6 +8,8 @@ const createToken = (user) => {
 };
 const verifyToken = (token) => {
   const secretKey = process.env.JWT_SECRET;
+  console.log(secretKey);
+
   try {
     const decoded = jwt.verify(token, secretKey);
     return decoded;
