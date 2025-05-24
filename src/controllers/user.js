@@ -3,7 +3,11 @@ import { createToken } from "../libs/jwt.js";
 import { hassPassword, checkPassword } from "../libs/hashpassword.js";
 const handlelogout = async (req, res, next) => {
   try {
-    res.clearCookie("token");
+    res.clearCookie("token", {
+      httpOnly: true,
+      secure: true,
+      sameSite: "None",
+    });
     return res.json({
       message: "Logout successful",
       success: true,
@@ -47,7 +51,11 @@ const handleLogin = async (req, res, next) => {
     }
     const token = createToken(user);
 
-    res.cookie("token", token);
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: true,
+      sameSite: "none",
+    });
     return res.json({
       message: "Login successful",
       success: true,
