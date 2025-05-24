@@ -13,6 +13,7 @@ const allowedorigin = [
   "http://localhost:3000",
   "http://localhost:5173",
   "http://localhost:4173",
+  "https://frontend-mauve-eight-65.vercel.app",
 ];
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
